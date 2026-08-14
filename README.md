@@ -26,8 +26,9 @@
 |---|-----------|----------|------------|--------|----------|
 | 01 | [Brooklyn Nine Nine](./TryHackMe/brooklyn-nine-nine) | CTF / Commands | Easy | ✅ Solved | [View](./TryHackMe/brooklyn-nine-nine/README.md) |
 | 02 | [Bolt Room](./TryHackMe/bolt-room) | Web / CTF | Easy | ✅ Solved | [View](./TryHackMe/bolt-room/README.md) |
-| 03 | [Network Services](./TryHackMe/network-services) | Networking / SMB / Telnet / FTP / SSH | Medium | ✅ Solved | [View](./TryHackMe/network-services/README.md) |
+| 03 | [Hacker Bounty](./TryHackMe/hacker-bounty) | CTF / Web | Easy | ✅ Solved | [View](./TryHackMe/hacker-bounty/README.md) |
 | 04 | [Pickle Rick](./TryHackMe/pickle-rick) | CTF / Linux | Easy | ✅ Solved | [View](./TryHackMe/pickle-rick/README.md) |
+| 05 | [Network Services](./TryHackMe/network-services) | Networking / SMB / Telnet / FTP / SSH | Medium | ✅ Solved | [View](./TryHackMe/network-services/README.md) |
 
 ### 🕷️ PortSwigger Web Security Academy
 
