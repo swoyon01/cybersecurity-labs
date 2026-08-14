@@ -1,20 +1,9 @@
 # 📸 Screenshots
 
-Add your screenshots here!
+<img width="2560" height="1368" alt="Screenshot 2026-08-15 004333" src="https://github.com/user-attachments/assets/3042032e-3e35-4a75-b1b9-6bb13034bc42" />
 
-## Suggestions
+<img width="2560" height="1368" alt="Screenshot 2026-08-15 001517" src="https://github.com/user-attachments/assets/eb55dea5-3783-4f9f-9dc7-760511aa598d" />
 
-| # | Screenshot | Description |
-|:-:|:-----------|:------------|
-| 1 | `01-nmap.png` | Nmap scan results |
-| 2 | `02-ftp.png` | FTP anonymous login |
-| 3 | `03-files.png` | Files downloaded from FTP |
-| 4 | `04-hydra.png` | Hydra brute force |
-| 5 | `05-ssh.png` | SSH login success |
-| 6 | `06-sudo.png` | Sudo privilege found |
-| 7 | `07-root.png` | Root access |
-| 8 | `08-flags.png` | All flags found |
+<img width="2560" height="1368" alt="Screenshot 2026-08-15 001430" src="https://github.com/user-attachments/assets/f8316814-578a-460a-a714-07b4fc18b67d" />
 
----
 
-**Made with 💜 by Swoyon**
