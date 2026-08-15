@@ -1,5 +1,7 @@
 # 📸 Screenshots
 
+01-lab-homepage.png
+
 <img width="2560" height="1368" alt="Screenshot 2026-08-14 012903" src="https://github.com/user-attachments/assets/ea526215-f535-466e-81c7-4d75cf4c7b0a" />
 
 
