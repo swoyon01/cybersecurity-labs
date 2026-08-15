@@ -1,13 +1,9 @@
 # 📸 Screenshots
 
-Add your Burp Suite and lab screenshots here with the following naming convention:
+<img width="2560" height="1368" alt="Screenshot 2026-08-14 012903" src="https://github.com/user-attachments/assets/ea526215-f535-466e-81c7-4d75cf4c7b0a" />
 
-| Filename | Description |
-|----------|-------------|
-| `01-lab-homepage.png` | The lab homepage showing "Not solved" |
-| `02-burp-intercept.png` | Burp Proxy intercepting the login request |
-| `03-repeater-payload.png` | Burp Repeater showing the payload injection |
-| `04-login-success.png` | The successful 302 redirect response |
-| `05-admin-account.png` | The administrator account page after bypass |
 
-> 💡 **Tip:** You can also add a `06-lab-solved.png` showing the green "Solved" badge!
+<img width="2560" height="1368" alt="Screenshot 2026-08-14 013223" src="https://github.com/user-attachments/assets/5740fe24-c9fc-4cf3-8fdd-2ebc9266c8ec" />
+
+
+<img width="2560" height="1368" alt="Screenshot 2026-08-14 013420" src="https://github.com/user-attachments/assets/327b15a0-15cf-4227-9aaa-f1dce301c06d" />
