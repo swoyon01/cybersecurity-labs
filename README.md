@@ -13,7 +13,7 @@
 | Platform | Labs Completed | In Progress |
 |----------|---------------|-------------|
 | **TryHackMe** | 4 | 2 |
-| **PortSwigger** | 1 | 3 |
+| **PortSwigger** | 2 | 3 |
 | **Custom Tools** | 1 | 1 |
 
 ---
@@ -35,7 +35,7 @@
 | # | Lab Name | Vulnerability | Difficulty | Status | Write-up |
 |---|----------|---------------|------------|--------|----------|
 | 01 | [SQL Injection — Hidden Data Retrieval](./PortSwigger/sqli-hidden-data) | SQL Injection (WHERE clause) | Apprentice | ✅ Solved | [View](./PortSwigger/sqli-hidden-data/README.md) |
-| 02 | SQL Injection — Login Bypass | SQL Injection | Apprentice | 🔄 In Progress | — |
+| 02 | [SQL Injection — Login Bypass](./PortSwigger/sqli-login-bypass) | SQL Injection | Apprentice | ✅ Solved | [View](./PortSwigger/sqli-login-bypass/README.md) |
 | 03 | SQL Injection — UNION Attack | SQL Injection | Practitioner | ⏳ Pending | — |
 
 ### 🛠️ Tools & Scripts
@@ -48,12 +48,13 @@
 
 ## 🎓 About Me
 
-- 🎓 **Student** | Aspiring AppSec Engineer
-- 🐍 **Python** | 🐧 **Linux** | 🌐 **Networking** | 🛡️ **Cybersecurity**
-- 📚 Currently learning: Web Application Security (OWASP Top 10)
-- 🎯 Goal: Master's in Cybersecurity & AppSec career
+**Saber Hasan Swoyon** | Software Engineering Undergraduate
 
----
+- 🛡️ **Aspiring Application Security (AppSec) Engineer**
+- 🐍 **Tech Stack:** Python | Linux | Networking | Web Security
+- 📚 **Currently Learning:** Web Application Security (PortSwigger Web Security Academy)
+- 🌏 **Languages:** 🌐 English | 中文 (HSK4) | বাংলা 
+- 🎯 **Goal:** Master's in Cybersecurity → AppSec Career @ Top Tech
 
 ## 🛠️ Tech Stack
 
