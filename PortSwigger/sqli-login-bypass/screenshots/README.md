@@ -7,3 +7,6 @@
 
 
 <img width="2560" height="1368" alt="Screenshot 2026-08-14 013420" src="https://github.com/user-attachments/assets/327b15a0-15cf-4227-9aaa-f1dce301c06d" />
+
+
+<img width="2560" height="1368" alt="Screenshot 2026-08-14 013605" src="https://github.com/user-attachments/assets/654d6355-e7ab-462b-9e18-646074ecc0f5" />
