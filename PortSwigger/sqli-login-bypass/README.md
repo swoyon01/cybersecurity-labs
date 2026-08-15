@@ -87,6 +87,8 @@ I used **Burp Suite** to intercept and modify the login request before sending i
 4. Modified the intercepted `username` parameter to inject the payload `administrator'--`
 5. Forwarded the modified request
 
+## 📸 Proof of Concept
+
 ### Screenshot
 
 <img width="2560" height="1368" alt="Screenshot 2026-08-14 013223" src="https://github.com/user-attachments/assets/9daab728-0d5e-4ab2-9a1e-9fb52b07a831" />
@@ -96,7 +98,6 @@ I used **Burp Suite** to intercept and modify the login request before sending i
 
 ---
 
-## 📸 Proof of Concept
 
 ### After Injection
 
