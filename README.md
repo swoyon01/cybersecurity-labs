@@ -40,9 +40,9 @@
 
 ### 🛠️ Tools & Scripts
 
-| # | Tool Name | Language | Purpose | Status |
-|---|-----------|----------|---------|--------|
-| 01 | [Domain to IP](./Tools/domain-to-ip) | Python | DNS Resolution Utility | ✅ Complete | [View](./Tools/domain-to-ip/README.md) |
+| # | Tool Name | Language | Purpose | Status | View |
+|---|-----------|----------|---------|--------|------|
+| 01 | [Domain to IP](./Custom_Tools/Domain%20to%20IP) | Python | DNS Resolution Utility | ✅ Complete | [View](./Custom_Tools/Domain%20to%20IP/README.md) |
 
 ---
 
