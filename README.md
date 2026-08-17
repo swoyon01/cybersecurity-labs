@@ -42,8 +42,7 @@
 
 | # | Tool Name | Language | Purpose | Status | View |
 |---|-----------|----------|---------|--------|------|
-| 01 | [Domain to IP](./Custom_Tools/Domain%20to%20IP) | Python | DNS Resolution Utility | ✅ Complete | [View](./Custom_Tools/Domain%20to%20IP/README.md) |
-
+| 01 | [Domain to IP](./Custom_Tools/domain_to_ip) | Python | DNS Resolution Utility | ✅ Complete | [View](./Custom_Tools/domain_to_ip/README.md) |
 ---
 
 ## 🎓 About Me
