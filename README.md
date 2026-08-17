@@ -42,7 +42,7 @@
 
 | # | Tool Name | Language | Purpose | Status |
 |---|-----------|----------|---------|--------|
-| 01 | [Domain to IP](./Tools/domain-to-ip) | Python | DNS Resolution Utility | ✅ Complete |
+| 01 | [Domain to IP](./Tools/domain-to-ip) | Python | DNS Resolution Utility | ✅ Complete | [View](./Tools/domain-to-ip/README.md) |
 
 ---
 
