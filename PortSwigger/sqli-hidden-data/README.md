@@ -148,12 +148,6 @@ The application constructs SQL queries using **string concatenation** instead of
 | **WAF Rules** | Deploy Web Application Firewall with SQLi detection |
 | **Least Privilege** | Database accounts should have minimal required permissions |
 
-### 4. Why This Matters for AppSec
-Understanding SQL Injection is fundamental because:
-- It's #3 in the [OWASP Top 10](https://owasp.org/www-project-top-ten/)
-- It appears in **74% of web applications** during penetration tests
-- It's often the entry point for more severe attacks (data exfiltration, RCE)
-
 ---
 
 ## 📚 References
