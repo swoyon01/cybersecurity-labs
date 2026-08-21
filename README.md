@@ -13,7 +13,7 @@
 | Platform | Labs Completed | In Progress |
 |----------|---------------|-------------|
 | **TryHackMe** | 4 | 2 |
-| **PortSwigger** | 2 | 3 |
+| **PortSwigger** | 3 | 2 |
 | **Custom Tools** | 1 | 1 |
 
 ---
@@ -36,7 +36,7 @@
 |---|----------|---------------|------------|--------|----------|
 | 01 | [SQL Injection — Hidden Data Retrieval](./PortSwigger/sqli-hidden-data) | SQL Injection (WHERE clause) | Apprentice | ✅ Solved | [View](./PortSwigger/sqli-hidden-data/README.md) |
 | 02 | [SQL Injection — Login Bypass](./PortSwigger/sqli-login-bypass) | SQL Injection | Apprentice | ✅ Solved | [View](./PortSwigger/sqli-login-bypass/README.md) |
-| 03 | SQL Injection — UNION Attack | SQL Injection | Practitioner | ⏳ Pending | — |
+| 03 | [SQL Injection — UNION Attack](./PortSwigger/sqli-union-columns) | SQL Injection | Practitioner | ✅ Solved | [View](./PortSwigger/./PortSwigger/sqli-union-columns/README.md) |
 
 ### 🛠️ Tools & Scripts
 
@@ -53,7 +53,7 @@
 - 🐍 **Tech Stack:** Python | Linux | Networking | Web Security
 - 📚 **Currently Learning:** Web Application Security (PortSwigger Web Security Academy)
 - 🌏 **Languages:** 🌐 English | 中文 (HSK4) | বাংলা 
-- 🎯 **Goal:** Master's in Cybersecurity → AppSec Career @ Top Tech
+- 🎯 **Goal:** Master's in Cybersecurity → AppSec Career 
 
 ## 🛠️ Tech Stack
 
