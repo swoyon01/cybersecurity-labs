@@ -37,6 +37,7 @@
 | 01 | [SQL Injection — Hidden Data Retrieval](./PortSwigger/sqli-hidden-data) | SQL Injection (WHERE clause) | Apprentice | ✅ Solved | [View](./PortSwigger/sqli-hidden-data/README.md) |
 | 02 | [SQL Injection — Login Bypass](./PortSwigger/sqli-login-bypass) | SQL Injection | Apprentice | ✅ Solved | [View](./PortSwigger/sqli-login-bypass/README.md) |
 | 03 | [SQL Injection — UNION Attack](./PortSwigger/sqli-union-columns) | SQL Injection | Practitioner | ✅ Solved | [View](./PortSwigger/sqli-union-columns/README.md) |
+| 04 | [SQL Injection — UNION Attack (Finding Text Column)](./PortSwigger/sqli-union-text-column) | SQL Injection (UNION) | Practitioner | ✅ Solved | [View](./PortSwigger/sqli-union-text-column/README.md) |
 
 ### 🛠️ Tools & Scripts
 
