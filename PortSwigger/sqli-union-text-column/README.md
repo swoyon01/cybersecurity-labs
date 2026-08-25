@@ -139,18 +139,6 @@ I used **Burp Suite** to systematically test each column position.
 
 ---
 
-## 📸 Proof of Concept
-
-| Step | Payload | Response | Screenshot |
-|------|---------|----------|------------|
-| 1 | `UNION SELECT NULL,NULL,NULL` | 200 OK | [View](./screenshots/04-burp-3nulls-confirmed.png) |
-| 2 | `UNION SELECT 'abc',NULL,NULL` | 500 Error | [View](./screenshots/04-burp-col1-string-error.png) |
-| 3 | `UNION SELECT NULL,'abc',NULL` | 200 OK | [View](./screenshots/04-burp-col2-string-success.png) |
-| 4 | `UNION SELECT NULL,'abc',NULL` (Browser) | abc displayed | [View](./screenshots/04-browser-abc-displayed.png) |
-| 5 | `UNION SELECT NULL,'KYE1Ca',NULL` | Lab Solved | [View](./screenshots/04-sql-injection-union-text-solved.png) |
-
----
-
 ## 🧠 Key Takeaways
 
 ### 1. The Process
