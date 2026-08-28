@@ -1,0 +1,59 @@
+# Directory Enumeration with Gobuster
+
+```bash
+gobuster dir -u http://10.10.XXX.XXX -w /usr/share/wordlists/dirb/common.txt -o 02-enumeration/gobuster.txt
+```
+
+## Results
+
+```
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.XXX.XXX
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+/.hta                 (Status: 403) [Size: 292]
+/.htaccess            (Status: 403) [Size: 297]
+/.htpasswd            (Status: 403) [Size: 297]
+/assets               (Status: 301) [Size: 315] [--> http://10.10.XXX.XXX/assets/]
+/fuel                 (Status: 301) [Size: 313] [--> http://10.10.XXX.XXX/fuel/]
+/index.php            (Status: 200) [Size: 2345]
+/server-status        (Status: 403) [Size: 301]
+===============================================================
+Finished
+===============================================================
+```
+
+## Key Findings
+
+| Directory | Status | Notes |
+|-----------|--------|-------|
+| `/fuel` | 301 Redirect | **FUEL CMS admin panel** |
+| `/assets` | 301 Redirect | Static assets directory |
+| `/index.php` | 200 OK | Main homepage |
+
+## FUEL CMS Admin Panel
+
+Navigating to `http://10.10.XXX.XXX/fuel` reveals the FUEL CMS admin login page.
+
+Default credentials attempted:
+- admin / admin ❌
+- admin / password ❌
+
+## Technology Stack Identified
+
+| Technology | Version | Source |
+|------------|---------|--------|
+| FUEL CMS | 1.4.1 | Homepage footer |
+| Apache | 2.4.18 | Server header |
+| PHP | 7.0+ | `.php` extensions |
+| OS | Ubuntu | Server header |

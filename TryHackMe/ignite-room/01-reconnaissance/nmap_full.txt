@@ -1,0 +1,24 @@
+# Nmap Full Port Scan
+
+```bash
+nmap -p- -oN 01-reconnaissance/nmap_full.txt 10.10.XXX.XXX
+```
+
+## Results
+
+```
+Starting Nmap 7.94 ( https://nmap.org )
+Nmap scan report for 10.10.XXX.XXX
+Host is up (0.15s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT   STATE SERVICE
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 234.56 seconds
+```
+
+## Analysis
+
+- Confirmed: Only port 80 is open
+- No hidden/high ports exposed
+- Attack surface is limited to web application

