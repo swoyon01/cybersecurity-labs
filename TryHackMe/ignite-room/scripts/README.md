@@ -12,7 +12,7 @@ This folder contains any custom or downloaded scripts used during the engagement
 python3 fuel_cms_rce.py -u http://target-ip
 ```
 
-To get Spawn a proper interactive shell:
+To get Spawn a proper interactive shell
 **Usage:**
 
 ```bash
