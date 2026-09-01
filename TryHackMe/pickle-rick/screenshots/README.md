@@ -1,4 +1,2 @@
-<div align="center">
-
 # 📸 Screenshots
 
