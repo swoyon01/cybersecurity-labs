@@ -7,7 +7,6 @@
 
 # 🥒 Pickle Rick - Complete Walkthrough
 
-> *"Wubbalubbadubdub!"* — Rick Sanchez
 
 **A comprehensive, step-by-step guide to conquering the Pickle Rick room on TryHackMe.**
 
