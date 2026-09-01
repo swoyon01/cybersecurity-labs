@@ -12,7 +12,7 @@
 
 | Platform | Labs Completed | In Progress |
 |----------|---------------|-------------|
-| **TryHackMe** | 4 | 2 |
+| **TryHackMe** | 5 | 2 |
 | **PortSwigger** | 5 | 2 |
 | **Custom Tools** | 1 | 1 |
 
