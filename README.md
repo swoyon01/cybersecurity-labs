@@ -13,7 +13,7 @@
 | Platform | Labs Completed | In Progress |
 |----------|---------------|-------------|
 | **TryHackMe** | 5 | 2 |
-| **PortSwigger** | 5 | 2 |
+| **PortSwigger** | 6 | 2 |
 | **Custom Tools** | 1 | 1 |
 
 ---
@@ -40,6 +40,7 @@
 | 03 | [SQL Injection — UNION Attack](./PortSwigger/sqli-union-columns) | SQL Injection | Practitioner | ✅ Solved | [View](./PortSwigger/sqli-union-columns/README.md) |
 | 04 | [SQL Injection — UNION Attack (Finding Text Column)](./PortSwigger/sqli-union-text-column) | SQL Injection (UNION) | Practitioner | ✅ Solved | [View](./PortSwigger/sqli-union-text-column/README.md) |
 | 05 | [SQL Injection — UNION Attack (Retrieving Data from Other Tables)](./PortSwigger/sqli-union-retrieve-data) | SQL Injection (UNION) | Practitioner | ✅ Solved | [View](./PortSwigger/sqli-union-retrieve-data/README.md) |
+| 06 | [SQL Injection — UNION Attack (Retrieving Multiple Values in a Single Column)](./PortSwigger/sqli-union-single-column) | SQL Injection (UNION + Concatenation) | Practitioner | ✅ Solved | [View](./PortSwigger/sqli-union-single-column/README.md) |
 
 ### 🛠️ Tools & Scripts
 
