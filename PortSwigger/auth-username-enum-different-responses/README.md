@@ -40,23 +40,9 @@ Navigated to the login page and submitted credentials to observe error messages.
 
 ---
 
-### Step 2 — Detect Response Difference (Valid Username)
-
-Submitted a known/predictable username with a wrong password to compare the error message.
-
-**Test 2 — Valid Username + Invalid Password:**
-- Username: `ad`
-- Password: `wrongpass`
-
-**Result:** Error message → `Incorrect password`
-
-> 🔑 **Key Finding:** The application returns a *different* error message when the username is valid (`Incorrect password`) versus when it is invalid (`Invalid username`). This allows username enumeration.
-
-
-
 ---
 
-### Step 3 — Enumerate Usernames with Burp Intruder
+### Step 2 — Enumerate Usernames with Burp Intruder
 
 Intercepted the login request in Burp Proxy and sent it to **Burp Intruder**.
 
@@ -84,7 +70,7 @@ username=§abcd1234§&password=wrongpass
 
 ---
 
-### Step 4 — Enumerate Password for Valid User
+### Step 3 — Enumerate Password for Valid User
 
 With the valid username confirmed, sent another Intruder attack targeting the `password` field.
 
@@ -106,7 +92,7 @@ username=ad&password=§wrongpass§
 
 ---
 
-### Step 5 — Login & Solve the Lab
+### Step 4 — Login & Solve the Lab
 
 Used the discovered credentials to log in:
 - **Username:** `ad`
