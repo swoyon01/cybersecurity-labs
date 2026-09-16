@@ -45,14 +45,14 @@ Navigated to the login page and submitted credentials to observe error messages.
 Submitted a known/predictable username with a wrong password to compare the error message.
 
 **Test 2 — Valid Username + Invalid Password:**
-- Username: `administrator`
+- Username: `ad`
 - Password: `wrongpass`
 
 **Result:** Error message → `Incorrect password`
 
 > 🔑 **Key Finding:** The application returns a *different* error message when the username is valid (`Incorrect password`) versus when it is invalid (`Invalid username`). This allows username enumeration.
 
-📸 `screenshots/07-login-valid-user-wrong-pass.png`
+
 
 ---
 
@@ -75,9 +75,11 @@ Host: ...web-security-academy.net
 username=§abcd1234§&password=wrongpass
 ```
 
-**Result:** Found one username (`administrator`) that returned `Incorrect password` instead of `Invalid username`.
+**Result:** Found one username (`ad`) that returned `Incorrect password` instead of `valid username`.
 
 <img width="1280" height="684" alt="Screenshot 2026-09-14 222355" src="https://github.com/user-attachments/assets/6509f04f-dfae-44a2-9999-7e9e2424117a" />
+<img width="1280" height="684" alt="Screenshot 2026-09-16 160655" src="https://github.com/user-attachments/assets/f4c4b8f2-a327-4afe-9525-f9eb13fd82a4" />
+
 
 
 ---
@@ -88,30 +90,32 @@ With the valid username confirmed, sent another Intruder attack targeting the `p
 
 **Intruder Configuration:**
 - **Attack type:** Sniper
-- **Payload position:** `password` parameter
+- **Payload position:** `wrongpass` parameter
 - **Payloads:** Loaded a password wordlist
 - **Grep - Extract:** Looked for `302 Redirect` or absence of error message
 
 **Payload:**
 ```
-username=administrator&password=§password§
+username=ad&password=§wrongpass§
 ```
 
 **Result:** One password returned a `302 Found` redirect to `/my-account` instead of the login error page.
 
-📸 `screenshots/07-intruder-password-brute.png`
+<img width="2560" height="1368" alt="image" src="https://github.com/user-attachments/assets/91893039-2619-4bc3-969d-aeb44226cd23" />
+
 
 ---
 
 ### Step 5 — Login & Solve the Lab
 
 Used the discovered credentials to log in:
-- **Username:** `administrator`
-- **Password:** `[discovered password]`
+- **Username:** `ad`
+- **Password:** `austin`
 
 **Result:** Successfully logged in. Lab marked as solved.
 
-📸 `screenshots/07-admin-solved.png`
+<img width="1280" height="684" alt="Screenshot 2026-09-16 161317" src="https://github.com/user-attachments/assets/e4327cb5-3503-4fbc-b959-788f70bb4189" />
+
 
 ---
 
