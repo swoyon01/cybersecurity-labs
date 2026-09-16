@@ -13,7 +13,7 @@
 | Platform | Labs Completed | In Progress |
 |----------|---------------|-------------|
 | **TryHackMe** | 5 | 2 |
-| **PortSwigger** | 6 | 2 |
+| **PortSwigger** | 7 | 2 |
 | **Custom Tools** | 1 | 1 |
 
 ---
@@ -41,6 +41,7 @@
 | 04 | [SQL Injection — UNION Attack (Finding Text Column)](./PortSwigger/sqli-union-text-column) | SQL Injection (UNION) | Practitioner | ✅ Solved | [View](./PortSwigger/sqli-union-text-column/README.md) |
 | 05 | [SQL Injection — UNION Attack (Retrieving Data from Other Tables)](./PortSwigger/sqli-union-retrieve-data) | SQL Injection (UNION) | Practitioner | ✅ Solved | [View](./PortSwigger/sqli-union-retrieve-data/README.md) |
 | 06 | [SQL Injection — UNION Attack (Retrieving Multiple Values in a Single Column)](./PortSwigger/sqli-union-single-column) | SQL Injection (UNION + Concatenation) | Practitioner | ✅ Solved | [View](./PortSwigger/sqli-union-single-column/README.md) |
+| 07 | [Authentication — Username Enumeration via Different Responses](./PortSwigger/auth-username-enum-different-responses) | Authentication (Username Enumeration) | Apprentice | ✅ Solved | [View](./PortSwigger/auth-username-enum-different-responses/README.md) |
 
 ### 🛠️ Tools & Scripts
 
