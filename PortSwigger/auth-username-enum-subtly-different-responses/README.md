@@ -1,8 +1,9 @@
-Lab 08: Authentication — Username Enumeration via Subtly Different Responses
-Source: PortSwigger Web Security Academy
-Track: Authentication
-Difficulty: Apprentice
-Status: ✅ Solved
+# Lab 08: Authentication — Username Enumeration via Subtly Different Responses
+
+> **Source:** [PortSwigger Web Security Academy](https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-subtly-different-responses)  
+> **Track:** Authentication  
+> **Difficulty:** Apprentice  
+> **Status:** ✅ Solved
 
 ### 📌 Vulnerability Description
 
