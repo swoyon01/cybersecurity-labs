@@ -13,7 +13,7 @@
 | Platform | Labs Completed | In Progress |
 |----------|---------------|-------------|
 | **TryHackMe** | 5 | 2 |
-| **PortSwigger** | 7 | 2 |
+| **PortSwigger** | 9 | 2 |
 | **Custom Tools** | 1 | 1 |
 
 ---
@@ -43,6 +43,8 @@
 | 06 | [SQL Injection — UNION Attack (Retrieving Multiple Values in a Single Column)](./PortSwigger/sqli-union-single-column) | SQL Injection (UNION + Concatenation) | Practitioner | ✅ Solved | [View](./PortSwigger/sqli-union-single-column/README.md) |
 | 07 | [Authentication — Username Enumeration via Different Responses](./PortSwigger/auth-username-enum-different-responses) | Authentication (Username Enumeration) | Apprentice | ✅ Solved | [View](./PortSwigger/auth-username-enum-different-responses/README.md) |
 | 08 | [Authentication — Username Enumeration via Subtly Different Responses](./PortSwigger/auth-username-enum-subtly-different-responses) | Authentication (Username Enumeration) | Apprentice | ✅ Solved | [View](./PortSwigger/auth-username-enum-subtly-different-responses/README.md) |
+| 09 | [Authentication — Password Reset Broken Logic](./PortSwigger/auth-password-reset-broken-logic) | Authentication (Password Reset) | Apprentice | ✅ Solved | [View](./PortSwigger/auth-password-reset-broken-logic/README.md) |
+
 
 ### 🛠️ Tools & Scripts
 
