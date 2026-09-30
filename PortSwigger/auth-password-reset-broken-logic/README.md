@@ -53,10 +53,9 @@ Opened the **PortSwigger Email Client** and retrieved the password reset link fo
 The link contained a temporary reset token:
 
 ```text
-/forgot-password?temp-forgot-password-token=em2zkd935x0k8p195ca18d6fmoqil2hy
+/forgot-password?temp-forgot-password-token=**************
 ```
 
-📸 `screenshots/09-email-client-token.png`
 
 ### Step 3 — Submit New Password for `wiener`
 
