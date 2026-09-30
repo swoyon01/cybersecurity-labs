@@ -42,6 +42,7 @@
 | 05 | [SQL Injection — UNION Attack (Retrieving Data from Other Tables)](./PortSwigger/sqli-union-retrieve-data) | SQL Injection (UNION) | Practitioner | ✅ Solved | [View](./PortSwigger/sqli-union-retrieve-data/README.md) |
 | 06 | [SQL Injection — UNION Attack (Retrieving Multiple Values in a Single Column)](./PortSwigger/sqli-union-single-column) | SQL Injection (UNION + Concatenation) | Practitioner | ✅ Solved | [View](./PortSwigger/sqli-union-single-column/README.md) |
 | 07 | [Authentication — Username Enumeration via Different Responses](./PortSwigger/auth-username-enum-different-responses) | Authentication (Username Enumeration) | Apprentice | ✅ Solved | [View](./PortSwigger/auth-username-enum-different-responses/README.md) |
+| 08 | [Authentication — Username Enumeration via Subtly Different Responses](./PortSwigger/auth-username-enum-subtly-different-responses) | Authentication (Username Enumeration) | Apprentice | ✅ Solved | [View](./PortSwigger/auth-username-enum-subtly-different-responses/README.md) |
 
 ### 🛠️ Tools & Scripts
 
