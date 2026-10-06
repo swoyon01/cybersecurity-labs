@@ -44,6 +44,7 @@
 | 07 | [Authentication — Username Enumeration via Different Responses](./PortSwigger/auth-username-enum-different-responses) | Authentication (Username Enumeration) | Apprentice | ✅ Solved | [View](./PortSwigger/auth-username-enum-different-responses/README.md) |
 | 08 | [Authentication — Username Enumeration via Subtly Different Responses](./PortSwigger/auth-username-enum-subtly-different-responses) | Authentication (Username Enumeration) | Apprentice | ✅ Solved | [View](./PortSwigger/auth-username-enum-subtly-different-responses/README.md) |
 | 09 | [Authentication — Password Reset Broken Logic](./PortSwigger/auth-password-reset-broken-logic) | Authentication (Password Reset) | Apprentice | ✅ Solved | [View](./PortSwigger/auth-password-reset-broken-logic/README.md) |
+| 10 | [Authentication — Username Enumeration via Response Timing](./PortSwigger/auth-username-enum-response-timing) | Authentication (Username Enumeration) | Practitioner | ✅ Solved | [View](./PortSwigger/auth-username-enum-response-timing/README.md) |
 
 
 ### 🛠️ Tools & Scripts
