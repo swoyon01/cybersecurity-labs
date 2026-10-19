@@ -1,0 +1,34 @@
+# Flags
+
+## User Flag
+
+**Location:** `/home/www-data/flag.txt`
+
+```bash
+$ cat /home/www-data/flag.txt
+THM{XXXXXXXXXXXXXXXXXXXXXXXX}
+```
+
+**Obtained:** After gaining initial access as www-data
+
+## Root Flag
+
+**Location:** `/root/root.txt`
+
+```bash
+# cat /root/root.txt
+THM{YYYYYYYYYYYYYYYYYYYYYYYY}
+```
+
+**Obtained:** After escalating privileges to root
+
+## Flag Summary
+
+| Flag | Path | User Required |
+|------|------|---------------|
+| User | `/home/www-data/flag.txt` | www-data |
+| Root | `/root/root.txt` | root |
+
+## Submission
+
+Both flags submitted successfully on TryHackMe platform.
