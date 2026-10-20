@@ -40,7 +40,7 @@ All labs are organised **by vulnerability type**, following the official Academy
 | 💉 **SQL Injection** | **6** | 13 | [Browse →](./PortSwigger/SQL-Injection) |
 | 🔐 **Authentication** | **4** | 14 | [Browse →](./PortSwigger/Authentication) |
 | 🧪 **Cross-Site Scripting (XSS)** | — | 30 | [Browse →](./PortSwigger/XSS-Cross-Site-Scripting) |
-| 🔑 **JWT Attacks** | — | 8 | [Browse →](./PortSwigger/JWT-Attacks) |
+| 🔑 **JWT Attacks** | **1** | 8 | [Browse →](./PortSwigger/JWT-Attacks) |
 | 📤 **File Upload** | — | 7 | [Browse →](./PortSwigger/File-Upload) |
 | 📂 **File Path Traversal** | — | 7 | [Browse →](./PortSwigger/File-Path-Traversal) |
 | 💻 **OS Command Injection** | — | 5 | [Browse →](./PortSwigger/OS-Command-Injection) |
