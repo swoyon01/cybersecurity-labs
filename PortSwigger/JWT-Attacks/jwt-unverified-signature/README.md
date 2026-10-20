@@ -15,19 +15,15 @@
 ## 🔍 Reconnaissance
 
 ### Step 1: Identify the Authentication Mechanism
-<img width="1280" height="684" alt="Screenshot 2026-09-29 204151" src="https://github.com/user-attachments/assets/30416e19-743e-4a70-9d16-6fb12af6e68a" />
 
 Logged in with the provided credentials `wiener:peter` and inspected the session handling. The application issues a JWT inside the `session` cookie after login.
 
 ### Step 2: Test the Session Token
 Visited `/admin` with the valid session — the response was:
-<img width="1280" height="684" alt="Screenshot 2026-09-29 205119" src="https://github.com/user-attachments/assets/d652997d-eba6-4b90-a3cd-4a8ef072d0f1" />
-
 
 ```
 "Admin interface only available if logged in as an administrator"
 ```
-<img width="1280" height="684" alt="Screenshot 2026-09-29 205411" src="https://github.com/user-attachments/assets/1ce62c0c-6b79-48bc-883e-8db584e0579f" />
 
 **Result:** `401 Unauthorized` — the application checks the `sub` (subject) claim of the JWT to decide access, but the question is: **does it verify the signature?**
 
