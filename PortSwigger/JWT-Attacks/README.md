@@ -27,7 +27,7 @@ JWTs are the default session mechanism for APIs and SPAs. A single implementatio
 
 | # | Lab | Difficulty | Status | Write-up |
 |---|---|---|---|---|
-| 01 | JWT authentication bypass via unverified signature | Apprentice | ⏳ Planned | — |
+| 01 | JWT authentication bypass via unverified signature | Apprentice | ✅ Solved | [View](./01-jwt-unverified-signature/README.md) |
 | 02 | JWT authentication bypass via flawed signature verification | Apprentice | ⏳ Planned | — |
 | 03 | JWT authentication bypass via weak signing key | Apprentice | ⏳ Planned | — |
 | 04 | JWT authentication bypass via `jwk` header injection | Practitioner | ⏳ Planned | — |
