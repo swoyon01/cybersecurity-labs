@@ -226,15 +226,6 @@ Understanding JWT verification flaws is critical because:
 
 ---
 
-## 🔗 Related Labs
-
-| Lab | Topic | Status |
-|-----|-------|--------|
-| [Lab 11](../11-xxe) | XXE — External Entity Exploitation | ✅ Solved |
-| [Lab 12](./12-jwt-unverified-signature) | JWT — Authentication Bypass via Unverified Signature | ✅ Solved |
-| [Lab 13](../13-jwt-wak-secret) | JWT — Brute-Forcing Weak Secret Keys | ⏳ Pending |
-
----
 
 > 📝 **Author:** Saber Hasan Swoyon  
 > 🎓 **Status:** Student | Aspiring AppSec Engineer  
