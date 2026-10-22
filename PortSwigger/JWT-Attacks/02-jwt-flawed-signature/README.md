@@ -1,177 +1,249 @@
-# Lab 13: JWT Authentication Bypass via Flawed Signature Verification
+# 🚫 Lab 13: JWT Attacks — Authentication Bypass via Flawed Signature Verification
 
-> **Source:** [PortSwigger Web Security Academy](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-flawed-signature-verification)  
-> **Track:** Authentication / JWT  
-> **Difficulty:** Apprentice  
+> **Lab URL:** [PortSwigger Web Security Academy](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-flawed-signature-verification)  
+> **Difficulty:** 🟢 Apprentice  
 > **Status:** ✅ Solved
 
 ---
 
-## 🎯 Objective
+## 📋 Lab Description
 
-Exploit a flaw in the lab's JWT signature verification to access `/admin` as `administrator`, then delete the user `carlos` to complete the lab.
-
----
-
-## 🛠️ Tools
-
-- Burp Suite Community Edition (Repeater + Inspector)
-- Firefox (Burp Browser)
-- Kali Linux
+> *"This lab uses a JWT-based mechanism for handling sessions and exposes an error message when it receives an invalid token. It uses a weak secret key to sign the tokens. To solve the lab, first find the weak secret key. Then use it to forge a JWT with header parameter alg set to none, access the admin panel at /admin, then delete the user carlos. Note: You can log in to your own account using the following credentials: wiener:peter."*
 
 ---
 
-## 🔍 Vulnerability Background
+## 🔍 Reconnaissance
 
-The lab verifies JWTs insecurely: **when the token header specifies `"alg":"none"`, the server skips signature verification entirely** and blindly trusts the payload claims.
+### Step 1: Identify the Authentication Mechanism
+Logged in with the provided credentials `wiener:peter` and loaded `/my-account`. The application issues a JWT inside the `session` cookie. Sent the request to Burp Repeater and inspected the token using Burp's **JSON Web Token** tab.
 
-JWT header and payload are only **Base64URL-encoded — not encrypted**. Anyone can decode, modify, and re-encode them. Because the server accepts an unsigned token, changing the `sub` claim to `administrator` grants full admin access — no secret key required.
-
-⚠️ **Lesson:** Decoding a token is not verifying it. A JWT must be treated as a *bearer credential*.
-
----
-
-## 🔍 Step-by-Step Methodology
-
-### Step 1 — Capture the Baseline Authenticated Request
-
-Logged in with the lab-supplied credentials (`wiener`), loaded `/my-account`, and sent the request to **Burp Repeater**. The `session` cookie contains a JWT. The Inspector panel decodes the header:
+**Decoded JWT:**
 
 ```json
-{"kid":"cbe9f5b4-02c0-4713-841d-de4eb3101837","alg":"RS256"}
+// Header
+{
+  "kid": "cbe9f5b4-02c0-4713-841d-de4eb3101837",
+  "alg": "RS256"
+}
+
+// Payload
+{
+  "iss": "portswigger",
+  "exp": 1790689207,
+  "sub": "wiener"
+}
 ```
 
-The baseline token is signed with **RS256**.
+<img width="2560" height="1368" alt="image" src="https://github.com/user-attachments/assets/5e612b40-a393-485a-89af-fad2be20bc1a" />
 
-<img width="1280" alt="baseline-jwt-request" src="screenshots/01-baseline-jwt-request.png">
 
----
-
-### Step 2 — Test the `alg: none` Header
-
-Modified the JWT header, changing the algorithm to `none` (re-encoded as Base64URL). The token remains accepted because the payload claim (`sub: wiener`) is unchanged — confirming the server parses the header algorithm from the token itself.
-
-<img width="1280" alt="alg-none-header-test" src="screenshots/02-alg-none-header-test.png">
+> **Note:** The Inspector panel decodes the header showing `"alg": "RS256"` — the baseline token is signed with RS256.
 
 ---
 
-### Step 3 — Confirm the Access-Control Boundary
+## 🚀 Exploitation
 
+### Goal: Bypass Signature Verification Using `alg: none`
+
+The lab verifies JWTs insecurely: **when the token header specifies `"alg":"none"`, the server skips signature verification entirely** and blindly trusts the payload claims. We can forge an unsigned token claiming to be `administrator`.
+
+---
+
+### Step 2: Test the `alg: none` Header
+Modified the JWT header, changing the algorithm from `RS256` to `none` (re-encoded as Base64URL). The token was still accepted because the payload claim (`sub: wiener`) was unchanged — confirming the server parses the algorithm from the token header itself.
+
+<img width="2560" height="1368" alt="image" src="https://github.com/user-attachments/assets/bf6c7fa7-616f-444b-9a19-a09a16233dfc" />
+
+
+---
+
+### Step 3: Confirm the Access-Control Boundary
 Requested `/admin` as the normal user — both in the browser and in Repeater.
 
 **Browser result:**
 > Admin interface only available if logged in as an administrator
 
-**Repeater result:** `HTTP/2 401 Unauthorized` with the original RS256 token (`sub: wiener`).
+**Repeater result:** ❌ `HTTP/2 401 Unauthorized` with the original RS256 token (`sub: wiener`).
 
-<img width="1280" alt="admin-denied-browser" src="screenshots/03-admin-denied-browser.png">
+<img width="2560" height="1368" alt="image" src="https://github.com/user-attachments/assets/ceed8aa7-2177-4904-9d9b-c0672ffe6e68" />
 
-<img width="1280" alt="admin-denied-401" src="screenshots/04-admin-denied-401.png">
 
----
+<img width="1280" height="684" alt="Screenshot 2026-10-22 154250" src="https://github.com/user-attachments/assets/3815521e-2691-46c7-9845-a479b17aa677" />
 
-### Step 4 — Modify the Claim Without Removing the Signature (Rejected)
-
-Changed the payload claim `sub` → `administrator` but **left the signature section untouched**. The server correctly **rejects** the token — the signature no longer matches the modified payload. This proves the signature protects the claims *when it is actually verified*.
-
-<img width="1280" alt="admin-claim-rejected" src="screenshots/05-admin-claim-rejected.png">
 
 ---
 
-### Step 5 — Exploit the Flawed Verifier (`alg: none` + empty signature)
+### Step 4: Modify the Claim Without Removing the Signature (Rejected)
+Changed the payload claim `sub` → `administrator` but **left the signature section untouched**. The server correctly **rejected** the token — the signature no longer matches the modified payload. This proves the signature protects the claims *when it is actually verified*.
 
+
+---
+
+### Step 5: Exploit the Flawed Verifier (`alg: none` + Empty Signature) ✅
 Now the actual bypass. Forged the token:
 
-1. Header → `"alg":"none"`
-2. Payload → `"sub":"administrator"`
+1. **Header** → `"alg":"none"`
+2. **Payload** → `"sub":"administrator"`
 3. **Signature removed entirely** — token ends with a trailing `.`
 
 Compact form: `base64url(header).base64url(payload).`
 
-Sent `GET /admin` with the forged token in the `session` cookie → **`HTTP/2 200 OK`**. The admin panel HTML is returned in the response body.
+Sent `GET /admin` with the forged token in the `session` cookie → **✅ `HTTP/2 200 OK`** — the admin panel HTML is returned in the response body! 🎯
 
-<img width="1280" alt="alg-none-admin-accepted" src="screenshots/06-alg-none-admin-accepted.png">
+<img width="1280" height="720" alt="Screenshot 2026-10-22 154813" src="https://github.com/user-attachments/assets/58ffccd9-8896-4934-a7f1-652248c60a90" />
 
-<img width="1280" alt="admin-panel" src="screenshots/07-admin-panel.png">
 
 ---
 
-### Step 6 — Delete `carlos` via the Admin Panel
-
+### Step 6: Delete the User carlos
 Scrolled the response body — the **Users** section lists both `wiener` and `carlos`, each with a delete link:
 
 ```text
 /admin/delete?username=carlos
 ```
 
-Sent the delete request with the same forged admin token → **`HTTP/2 302 Found`** (redirect back to `/admin`).
+Sent the delete request with the same forged admin token → **✅ `HTTP/2 302 Found`** (redirect back to `/admin`).
 
-<img width="1280" alt="admin-user-list" src="screenshots/08-admin-user-list.png">
 
-<img width="1280" alt="delete-carlos-302" src="screenshots/09-delete-carlos-302.png">
+<img width="1280" height="684" alt="Screenshot 2026-10-07 025117" src="https://github.com/user-attachments/assets/f50d880f-6c3f-4ce7-b4b3-1260214e9a94" />
 
----
-
-### Step 7 — Lab Solved
-
-Following the redirect, the response confirms: **"Congratulations, you solved the lab!"** — and the browser shows `User deleted successfully!` with `carlos` removed from the user list. 🎉
-
-<img width="1280" alt="lab-solved-repeater" src="screenshots/10-lab-solved-repeater.png">
-
-<img width="1280" alt="lab-solved-browser" src="screenshots/11-lab-solved-browser.png">
 
 ---
 
-## 📝 Attack Flow Summary
+### Step 7: Lab Solved! 🎉
+Following the redirect, the response confirms: **"Congratulations, you solved the lab!"** — and the browser shows `User deleted successfully!` with `carlos` removed from the user list.
 
-| Step | Action | Tool | Result |
-|------|--------|------|--------|
-| 1 | Capture `/my-account` request | Burp Proxy / Repeater | Baseline RS256 JWT obtained |
-| 2 | Change header `alg` → `none` | Inspector | Token still accepted |
-| 3 | Request `/admin` as `wiener` | Browser / Repeater | 401 Unauthorized — boundary confirmed |
-| 4 | Change `sub` only, keep signature | Inspector | 401 rejected — signature protects claims |
-| 5 | `alg: none` + `sub: administrator` + empty signature | Repeater | **200 OK — admin access granted** |
-| 6 | Delete `carlos` | Repeater | 302 Found — deletion successful |
-| 7 | Verify success | Browser | Lab solved |
+<img width="1280" height="684" alt="Screenshot 2026-10-07 025246" src="https://github.com/user-attachments/assets/a0300196-582f-4f86-b86c-17a37d12b37c" />
+
+
+<img width="1280" height="684" alt="Screenshot 2026-10-22 154657" src="https://github.com/user-attachments/assets/183ea8ce-42d6-4a50-8330-78e4fb376b33" />
+
 
 ---
 
-## 🎯 Key Takeaways
+### What Happens?
 
-1. **`alg: none` is catastrophic** — Never let a token header dictate verification policy; enforce a strict server-side algorithm allowlist.
-2. **Encoding ≠ Encryption** — Base64URL is trivially reversible. JWT payloads are readable and editable by anyone.
-3. **A correct verifier fails closed** — Step 4 proved the signature protects claims *when verified*. The bug was skipping verification entirely for `alg: none`.
-4. **The trailing `.` matters** — Removing the signature section means an empty third segment; some tools silently drop it.
-5. **`decode()` ≠ `verify()`** — Use the library's verification API and fail closed on any error.
-6. **Validate standard claims** — `iss`, `aud`, `exp`, `nbf` should all be enforced, not just the signature.
+**Original JWT (RS256, valid signature):**
+```json
+Header:  { "kid": "cbe9f5b4-...", "alg": "RS256" }
+Payload: { "iss": "portswigger", "exp": 1790689207, "sub": "wiener" }
+```
+→ ❌ Access denied — normal user, no admin rights
 
----
+**Tampered claim, signature untouched:**
+```json
+Payload: { "sub": "administrator" }
+```
+→ ❌ **401 Unauthorized** — signature mismatch, server correctly rejects
 
-## 🛡️ How This Is Fixed (Defender View)
-
-- Maintain an **explicit server-side algorithm allowlist** — ignore the token's `alg` header.
-- **Reject unsigned tokens** on all authenticated routes; fail closed on any verification failure.
-- Use a maintained JWT library's **`verify()`** method, never decode-only.
-- Validate standard claims (`iss`, `aud`, `exp`, `nbf`) as appropriate.
-- Add regression tests: altered claims, missing signatures, unexpected `alg`, and invalid signatures must all be rejected.
-
----
-
-## ⚠️ Disclaimer
-
-This repository is for **educational purposes only**. The techniques demonstrated here should only be practiced in authorized environments such as the PortSwigger Web Security Academy. Unauthorized testing on systems you do not own or have explicit permission to test is **illegal and unethical**.
-
-> 🔒 Session tokens and lab hostnames should be redacted (blurred) in screenshots before publishing, as they are replayable bearer credentials.
+**Forged token with `alg: none` + empty signature:**
+```json
+Header:  { "alg": "none" }
+Payload: { "sub": "administrator" }
+Signature: (empty — token ends with ".")
+```
+→ ✅ **200 OK** — server skips verification for `alg: none` and trusts the forged claim
 
 ---
 
-## 🔗 References
+## 🛠️ Burp Suite Intercept
 
-- [PortSwigger JWT Labs](https://portswigger.net/web-security/jwt)
-- [JWT Authentication Bypass via Flawed Signature Verification — Lab](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-flawed-signature-verification)
+I used **Burp Suite Community Edition** with the **JSON Web Token Editor** extension to intercept, decode, and modify the session token.
+
+### Steps:
+1. Logged in with `wiener:peter` and sent the `/my-account` request to **Repeater**
+2. Opened the **JSON Web Token** tab to decode the token
+3. Changed the header `alg` → `none` (Base64URL re-encoded automatically)
+4. Changed the payload `sub` → `administrator`
+5. **Removed the signature section entirely** so the token ends with a trailing `.`
+6. Forwarded requests to `/admin` and `/admin/delete?username=carlos`
+
+### Attack Flow Summary
+| Step | Action | Result |
+|------|--------|--------|
+| 1 | Capture `/my-account` request | Baseline RS256 JWT obtained |
+| 2 | Change header `alg` → `none` | Token still accepted |
+| 3 | Request `/admin` as `wiener` | 401 Unauthorized — boundary confirmed |
+| 4 | Change `sub` only, keep signature | 401 rejected — signature protects claims |
+| 5 | `alg: none` + `sub: administrator` + empty signature | **200 OK — admin access granted** |
+| 6 | Delete `carlos` | 302 Found — deletion successful |
+| 7 | Verify success | Lab solved |
+
+---
+
+## 📸 Proof of Concept
+
+![Lab Solved](./screenshots/13-lab-solved-browser.png)
+
+As seen in the screenshot:
+- The payload `"sub":"administrator"` was injected into the session JWT **with `alg: none` and an empty signature**
+- The `/admin` panel loaded successfully and `carlos` was deleted via `/admin/delete?username=carlos`
+- Lab shows **"Congratulations, you solved the lab!"**
+
+---
+
+## 🧠 Key Takeaways
+
+### 1. Vulnerability Root Cause
+The application **trusts the `alg` header from the token itself**. When it sees `"alg":"none"`, it skips signature verification entirely and blindly accepts the payload claims — a classic fail-open behavior.
+
+### 2. Why `alg: none` is Catastrophic
+- The token header must **never** dictate server-side security policy
+- Servers should enforce a **strict algorithm allowlist** and ignore the token's own `alg` value
+- `decode()` ≠ `verify()` — decoding is not verification; always use the library's `verify()` API
+
+### 3. Encoding ≠ Encryption
+JWT payloads are only **Base64URL encoded** — trivially reversible by anyone. The signature is the only thing protecting integrity, and it only works when actually checked.
+
+### 4. Enumeration Strategy
+| Attempt | Header `alg` | Payload `sub` | Signature | Response | Meaning |
+|---------|-------------|---------------|-----------|----------|---------|
+| 1st | `RS256` | `wiener` | Valid | 401 Unauthorized | Normal user, boundary confirmed |
+| 2nd | `RS256` | `administrator` | Invalid (untouched) | 401 Unauthorized | ✅ Signature IS checked for RS256 |
+| 3rd | `none` | `wiener` | Removed (trailing `.`) | 200 OK | `alg: none` accepted — **flaw confirmed** |
+| 4th | `none` | `administrator` | Removed (trailing `.`) | 200 OK | ✅ **Full admin access** |
+
+### 5. Impact
+- **Full Account Takeover:** Forge tokens for any identity, including administrators
+- **Privilege Escalation:** One header change turns a normal user into admin
+- **Complete Application Compromise:** Admin functions, user deletion, data manipulation
+
+### 6. Mitigation Strategies
+| Defense | Implementation |
+|---------|---------------|
+| **Algorithm Allowlist** | Enforce server-side; never trust the token's `alg` header |
+| **Reject Unsigned Tokens** | Fail closed on any verification error on all authenticated routes |
+| **Use `verify()`, Never Just `decode()`** | Use a maintained JWT library's verification API |
+| **Validate Standard Claims** | Enforce `iss`, `aud`, `exp`, `nbf` — not just the signature |
+| **Regression Tests** | Altered claims, missing signatures, unexpected `alg` must all be rejected |
+
+### 7. Why This Matters for AppSec
+- JWTs power modern APIs, SPAs, and microservices — this flaw class is **extremely common**
+- A single algorithm-confusion bug creates a **complete authentication bypass**
+- It chains directly into **privilege escalation**, **data breaches**, and **compliance violations**
+
+---
+
+## 📚 References
+
+- [PortSwigger — JWT Attacks](https://portswigger.net/web-security/jwt)
+- [PortSwigger — JWT Authentication Bypass via Flawed Signature Verification (Lab)](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-flawed-signature-verification)
 - [RFC 7519 — JSON Web Token (JWT)](https://datatracker.ietf.org/doc/html/rfc7519)
+- [jwt.io — JWT Debugger](https://jwt.io/)
 - [Burp JWT Editor Extension](https://portswigger.net/bappstore)
 
 ---
 
-*Happy Hacking! 🐱‍💻*
+## 🔗 Related Labs
+
+| Lab | Topic | Status |
+|-----|-------|--------|
+| [Lab 12](../12-jwt-unverified-signature) | JWT — Authentication Bypass via Unverified Signature | ✅ Solved |
+| [Lab 13](./13-jwt-flawed-signature) | JWT — Authentication Bypass via Flawed Signature Verification | ✅ Solved |
+| [Lab 14](../14-jwt-weak-secret) | JWT — Brute-Forcing Weak Secret Keys | ⏳ Pending |
+
+---
+
+> 📝 **Author:** Saber Hasan Swoyon  
+> 🎓 **Status:** Student | Aspiring AppSec Engineer  
+> 📅 **Date Solved:** 2026-10-22
