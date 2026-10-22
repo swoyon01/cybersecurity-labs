@@ -28,11 +28,11 @@ JWTs are the default session mechanism for APIs and SPAs. A single implementatio
 | # | Lab | Difficulty | Status | Write-up |
 |---|---|---|---|---|
 | 01 | JWT authentication bypass via unverified signature | Apprentice | ✅ Solved | [View](./01-jwt-unverified-signature/README.md) |
-| 02 | JWT authentication bypass via flawed signature verification | Apprentice | ⏳ Planned | — |
+| 02 | JWT authentication bypass via flawed signature verification | ✅ Solved | [View](./02-jwt-flawed-signature/README.md) |
 | 03 | JWT authentication bypass via weak signing key | Apprentice | ⏳ Planned | — |
 | 04 | JWT authentication bypass via `jwk` header injection | Practitioner | ⏳ Planned | — |
 | 05 | JWT authentication bypass via `jku` header injection | Practitioner | ⏳ Planned | — |
-| 06 | JWT authentication bypass via `kid` header path traversal | Practitioner | ⏳ Planned | — |
+| 06 | JWT authentication bypass via `kid` header path traversal | Practitioner | ⏳ Planned | — |    
 | 07 | JWT authentication bypass via algorithm confusion | Expert | ⏳ Planned | — |
 | 08 | JWT authentication bypass via algorithm confusion with no exposed key | Expert | ⏳ Planned | — |
 
