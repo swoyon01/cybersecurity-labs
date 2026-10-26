@@ -3,7 +3,7 @@
 All commands in this section run on the Kali/attacker machine. Use the target IP shown on the active TryHackMe room page; the address below matches the supplied session screenshot.
 
 ```bash
-export TARGET=10.112.130.178
+export TARGET=$IP
 ping -c 3 "$TARGET"
 ```
 
