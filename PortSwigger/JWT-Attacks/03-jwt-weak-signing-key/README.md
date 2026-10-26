@@ -2,7 +2,8 @@
 
 > **Lab URL:** [PortSwigger Web Security Academy](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-weak-signing-key)  
 > **Difficulty:** 🟠 Practitioner  
-> **Status:** ⏳ In progress — the screenshot supplied so far shows **Not solved**
+> **Status:**✅ Solved
+
 
 ---
 
