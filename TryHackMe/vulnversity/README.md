@@ -60,9 +60,3 @@ The included screenshot shows the service link/enable steps and `/bin/bash` with
 ![Bash SUID permission proof from the lab session](screenshots/06-suid-bash-permission.png)
 
 See [screenshots/README.md](screenshots/README.md) for the suggested evidence checklist. Add a final screenshot after `/bin/bash -p` and `id` confirms `euid=0(root)`.
-
-## Publishing notes
-
-- Do not commit actual `user.txt` or `root.txt` values; TryHackMe randomizes them per deployment.
-- Review screenshots before publishing and redact any flag values or information you do not want public.
-- No new `LICENSE` file is included. If this directory is added to an existing repository, follow its existing license; otherwise choose a license before granting reuse rights.
