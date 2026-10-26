@@ -60,3 +60,18 @@ The included screenshot shows the service link/enable steps and `/bin/bash` with
 ![Bash SUID permission proof from the lab session](screenshots/06-suid-bash-permission.png)
 
 See [screenshots/README.md](screenshots/README.md) for the suggested evidence checklist. Add a final screenshot after `/bin/bash -p` and `id` confirms `euid=0(root)`.
+
+
+---
+
+## ⚠️ Important Note
+
+> This is for **learning only**! 
+> 
+> Only hack systems you **own** or have **permission** to test!
+
+---
+
+This is my walkthrough of the Bolt room. I hope it helps other beginners!
+
+⭐ Star this repo if it helped you!
