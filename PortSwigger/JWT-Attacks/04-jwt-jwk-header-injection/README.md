@@ -131,9 +131,6 @@ A valid forged token can impersonate another user, including an administrator, a
 
 ---
 
-## 📸 Screenshot placement
-
-Save your screenshots in a `screenshots/` folder and use the filenames referenced above. The README already has a placeholder at each step. Before publishing, redact session cookies/JWTs and consider hiding the temporary lab hostname from screenshots.
 
 > 📝 **Author:** Saber Hasan Swoyon  
 > 📅 **Date solved:** 26-10-2026
