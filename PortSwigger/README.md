@@ -15,8 +15,8 @@
 | 01 | **SQL Injection** | 6 | 13 | `██████░░░░░░` | [Browse →](./SQL-Injection) |
 | 02 | **Authentication** | 4 | 14 | `████░░░░░░░░` | [Browse →](./Authentication) |
 | 03 | **Cross-Site Scripting (XSS)** | 0 | 30 | `░░░░░░░░░░░░` | [Browse →](./XSS-Cross-Site-Scripting) |
-| 04 | **JWT Attacks** | 0 | 8 | `░░░░░░░░░░░░` | [Browse →](./JWT-Attacks) |
-| 05 | **File Upload** | 0 | 7 | `░░░░░░░░░░░░` | [Browse →](./File-Upload) |
+| 04 | **JWT Attacks** | 4 | 8 | `██████░░░░░░░` | [Browse →](./JWT-Attacks) |
+| 05 | **File Upload** | 1 | 7 | `░░░░░░░░░░░░` | [Browse →](./File-Upload) |
 | 06 | **File Path Traversal** | 0 | 7 | `░░░░░░░░░░░░` | [Browse →](./File-Path-Traversal) |
 | 07 | **OS Command Injection** | 0 | 5 | `░░░░░░░░░░░░` | [Browse →](./OS-Command-Injection) |
 | 08 | **Access Control & IDOR** | 0 | 12 | `░░░░░░░░░░░░` | [Browse →](./Access-Control) |
