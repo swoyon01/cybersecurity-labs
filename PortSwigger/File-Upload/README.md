@@ -27,7 +27,7 @@ If an upload is only validated by client-side checks, extension blacklists, or `
 
 | # | Lab | Difficulty | Status | Write-up |
 |---|---|---|---|---|
-| 01 | Remote code execution via web shell upload | Apprentice | ⏳ Planned | — |
+| 01 | Remote code execution via web shell upload | Apprentice | ✅ Solved | [View](./01-rce-web-shell-upload/README.md) | |
 | 02 | Web shell upload via Content-Type restriction bypass | Apprentice | ⏳ Planned | — |
 | 03 | Web shell upload via path traversal | Practitioner | ⏳ Planned | — |
 | 04 | Web shell upload via extension blacklist bypass | Practitioner | ⏳ Planned | — |
