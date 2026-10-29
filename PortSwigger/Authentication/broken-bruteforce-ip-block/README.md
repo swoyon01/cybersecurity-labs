@@ -79,15 +79,13 @@ username=§wiener§&password=§peter§
 
 Every odd request logs in successfully as `wiener` (resetting the block), while every even request tests a password guess against `carlos`.
 
-📸 **`screenshots/03-pitchfork-payload-config.png`**
+<img width="1280" height="684" alt="Screenshot 2026-10-29 170932" src="https://github.com/user-attachments/assets/53271f39-f11a-415c-9d40-56ae98fa0439" />
 
 ---
 
 ### Step 4 — Confirm the Counter-Reset Request Succeeds
 
 Spot-checked one of the `wiener` / `peter` requests in the attack to confirm it returns a `302 Found` redirect to `/my-account`, proving the reset step is working and the IP stays unblocked throughout the attack.
-
-<img width="1280" height="684" alt="Screenshot 2026-10-29 170932" src="https://github.com/user-attachments/assets/53271f39-f11a-415c-9d40-56ae98fa0439" />
 
 
 ---
