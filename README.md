@@ -13,7 +13,7 @@
 
 | Platform | Completed | In progress | Focus |
 |----------|:---------:|:-----------:|-------|
-| **PortSwigger Web Security Academy** | 15 | 2 | Web app vulnerabilities |
+| **PortSwigger Web Security Academy** | 16 | 2 | Web app vulnerabilities |
 | **TryHackMe** | 5 | 1 | CTF, Linux, networking |
 | **Custom Tools & Code Review** | 2 | 1 | Python offsec tooling |
 
