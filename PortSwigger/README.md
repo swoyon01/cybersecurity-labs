@@ -20,11 +20,12 @@
 | 06 | **File Path Traversal** | 0 | 7 | `░░░░░░░░░░░░` | [Browse →](./File-Path-Traversal) |
 | 07 | **OS Command Injection** | 0 | 5 | `░░░░░░░░░░░░` | [Browse →](./OS-Command-Injection) |
 | 08 | **Access Control & IDOR** | 0 | 12 | `░░░░░░░░░░░░` | [Browse →](./Access-Control) |
-| 09 | **SSRF** | 0 | 7 | `░░░░░░░░░░░░` | [Browse →](./SSRF) |
-| 10 | **XXE** | 0 | 7 | `░░░░░░░░░░░░` | [Browse →](./XXE) |
-| 11 | **CSRF** | 0 | 9 | `░░░░░░░░░░░░` | [Browse →](./CSRF) |
-| 12 | **Information Disclosure** | 0 | 5 | `░░░░░░░░░░░░` | [Browse →](./Information-Disclosure) |
-| 13 | **Business Logic** | 0 | 8 | `░░░░░░░░░░░░` | [Browse →](./Business-Logic) |
+| 09 | **API Testing** | 0 | 5 | `░░░░░░░░░░░░` | [Browse →](./API-Testing) |
+| 10 | **SSRF** | 0 | 7 | `░░░░░░░░░░░░` | [Browse →](./SSRF) |
+| 11 | **XXE** | 0 | 7 | `░░░░░░░░░░░░` | [Browse →](./XXE) |
+| 12 | **CSRF** | 0 | 9 | `░░░░░░░░░░░░` | [Browse →](./CSRF) |
+| 13 | **Information Disclosure** | 0 | 5 | `░░░░░░░░░░░░` | [Browse →](./Information-Disclosure) |
+| 14 | **Business Logic** | 0 | 8 | `░░░░░░░░░░░░` | [Browse →](./Business-Logic) |
 
 **Total: 10 solved · 132 planned**
 
