@@ -36,7 +36,7 @@ Authentication decides who you are. Every flaw here is a direct path to account 
 | 06 | Password reset poisoning via middleware | 🟠 Practitioner | ⏳ Planned | — |
 | 07 | Password brute-force via password change | 🟠 Practitioner | ⏳ Planned | — |
 | 08 | Broken brute-force protection, multiple credentials per request | 🟠 Practitioner | ⏳ Planned | — |
-| 09 | Broken brute-force protection, IP block | 🟠 Practitioner | ⏳ Planned | — |
+| 09 | Broken brute-force protection, IP block | 🟠 Practitioner | ✅ Solved | [View](./05-broken-bruteforce-ip-block/README.md)  |
 | 10 | 2FA broken logic | 🟠 Practitioner | ⏳ Planned | — |
 | 11 | 2FA bypass using a brute-force attack | 🔴 Expert | ⏳ Planned | — |
 | 12 | Brute-forcing a stay-logged-in cookie | 🟠 Practitioner | ⏳ Planned | — |
