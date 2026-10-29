@@ -1,4 +1,4 @@
-#16 Lab: Broken Brute-Force Protection, IP Block
+# 16 Lab: Broken Brute-Force Protection, IP Block
 
 > **Source:** [PortSwigger Web Security Academy](https://portswigger.net/web-security/authentication/other-mechanisms/lab-broken-brute-force-protection-ip-block)
 > **Track:** Authentication
