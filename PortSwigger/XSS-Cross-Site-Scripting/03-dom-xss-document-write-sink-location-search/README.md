@@ -1,7 +1,7 @@
 # Lab 3: DOM XSS in `document.write` Sink Using Source `location.search`
 
 > Write-up for a PortSwigger Web Security Academy lab (DOM-based XSS, Apprentice level).
-> Done by: Hasan Abu Saber
+
 
 **Lab link:** https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-document-write-sink
 
