@@ -45,7 +45,8 @@ The response rendered:
 
 This confirmed the input is reflected verbatim, unescaped, inside the page's HTML — a strong candidate for reflected XSS.
 
-<img width="1280" height="720" alt="Screenshot 2026-11-04 020759" src="https://github.com/user-attachments/assets/23c16891-ee1f-428f-ac38-39ff0e053cda" />
+<img width="1280" height="683" alt="Screenshot 2026-11-04 020759(1)" src="https://github.com/user-attachments/assets/a6c3149a-27f0-4a43-bbeb-f5c2212db5d5" />
+
 
 
 ---
