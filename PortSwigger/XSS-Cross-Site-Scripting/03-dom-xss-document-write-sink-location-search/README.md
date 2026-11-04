@@ -51,7 +51,7 @@ This lab contains a **DOM-based cross-site scripting (XSS)** vulnerability in th
 ### Step 1: Check the comment section
 First I opened a blog post and looked at the comment section, because comments are a common place for XSS. A comment with `<script>alert(1)</script>` is shown as plain text.
 
-01-comment-section.png
+![Comment section](images/01-comment-section.png)
 
 ### Step 2: Check the response source
 In the Network tab, the HTML response shows that the comment is **encoded** (`&lt;script&gt;alert(1)&lt;/script&gt;`). So the comment section is not the vulnerable place in this lab.
