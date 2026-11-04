@@ -1,7 +1,6 @@
 # Lab 2: Stored XSS into HTML Context with Nothing Encoded
 
 > Write-up for a PortSwigger Web Security Academy lab (Cross-site scripting, Apprentice level).
-> Done by: Hasan Abu Saber
 
 **Lab link:** https://portswigger.net/web-security/cross-site-scripting/stored/lab-html-context-nothing-encoded
 
