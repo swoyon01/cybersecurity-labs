@@ -29,7 +29,7 @@ XSS is one of the most common web vulnerabilities. It bypasses the Same-Origin P
 |---|---|---|---|---|
 | 01 | Reflected XSS into HTML context with nothing encoded | Apprentice | ⏳ Planned | — |
 | 02 | Stored XSS into HTML context with nothing encoded | Apprentice | ⏳ Planned | — |
-| 03 | DOM XSS in `document.write` sink using source `location.search` | 🟢 Apprentice | ✅ Solved | [View](./dom-xss-document-write-sink-location-search/README.md) |
+| 03 | DOM XSS in `document.write` sink using source `location.search` | 🟢 Apprentice | ✅ Solved | [View](./03-dom-xss-document-write-sink-location-search/README.md) |
 | 04 | DOM XSS in `innerHTML` sink using source `location.search` | Apprentice | ⏳ Planned | — |
 | 05 | XSS into attribute with angle brackets HTML-encoded | Apprentice | ⏳ Planned | — |
 | 06 | Exploiting cross-site scripting to steal cookies | Practitioner | ⏳ Planned | — |
