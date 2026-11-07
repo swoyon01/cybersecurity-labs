@@ -1,4 +1,4 @@
-# Lab 19 : Reflected XSS into HTML Context with Nothing Encoded
+# Lab 1 : Reflected XSS into HTML Context with Nothing Encoded
 
 > **Source:** [PortSwigger Web Security Academy](https://portswigger.net/web-security/cross-site-scripting/reflected/lab-html-context-nothing-encoded)
 > **Track:** Cross-Site Scripting (XSS)
