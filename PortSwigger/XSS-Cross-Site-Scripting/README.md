@@ -27,12 +27,12 @@ XSS is one of the most common web vulnerabilities. It bypasses the Same-Origin P
 
 | # | Lab | Difficulty | Status | Write-up |
 |---|---|---|---|---|
-| 01 | Reflected XSS into HTML context with nothing encoded | Apprentice | ⏳ Planned | — |
-| 02 | Stored XSS into HTML context with nothing encoded | Apprentice | ⏳ Planned | — |
+| 01 | Reflected XSS into HTML context with nothing encoded | 🟢 Apprentice | ✅ Solved | [View](./01-reflected-xss-html-context/README.md) |
+| 02 | Stored XSS into HTML context with nothing encoded | 🟢 Apprentice | ✅ Solved | [View](./02-stored-xss-html-context-nothing-encoded/README.md) |
 | 03 | DOM XSS in `document.write` sink using source `location.search` | 🟢 Apprentice | ✅ Solved | [View](./03-dom-xss-document-write-sink-location-search/README.md) |
 | 04 | DOM XSS in `innerHTML` sink using source `location.search` | Apprentice | ⏳ Planned | — |
-| 05 | XSS into attribute with angle brackets HTML-encoded | Apprentice | ⏳ Planned | — |
-| 06 | Exploiting cross-site scripting to steal cookies | Practitioner | ⏳ Planned | — |
+| 05 | XSS into attribute with angle brackets HTML-encoded | Apprentice | ⏳ Planned | — |                        
+| 06 | Exploiting cross-site scripting to steal cookies | Practitioner | ⏳ Planned | — |                
 | 07 | Exploiting XSS to bypass CSRF defenses | Practitioner | ⏳ Planned | — |
 | 08 | Reflected XSS with event handlers and `href` attributes blocked | Expert | ⏳ Planned | — |
 | 09 | Stored XSS into `onclick` event with angle brackets and quotes encoded | Expert | ⏳ Planned | — |
