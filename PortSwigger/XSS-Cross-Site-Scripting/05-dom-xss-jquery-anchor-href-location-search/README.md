@@ -51,7 +51,7 @@ $(function() {
 
 ---
 
-## 🚀 Exploitation
+##  Exploitation
 
 ### Step 1: Confirm the Sink is Controllable (Benign Test)
 Visit:
