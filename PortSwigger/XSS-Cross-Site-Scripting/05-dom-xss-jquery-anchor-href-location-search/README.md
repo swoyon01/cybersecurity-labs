@@ -1,4 +1,4 @@
-# Lab 06: DOM XSS in jQuery Anchor `href` Attribute Sink Using `location.search` Source
+# Lab 05: DOM XSS in jQuery Anchor `href` Attribute Sink Using `location.search` Source
 
 > **Lab URL:** [PortSwigger Web Security Academy — DOM XSS in jQuery anchor href attribute sink using location.search source](https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-dom-xss-jquery-anchor-href-attribute-sink)  
 > **Difficulty:** 🟢 Apprentice  
