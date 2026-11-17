@@ -38,10 +38,10 @@ All labs are organised **by vulnerability type**, following the official Academy
 | Category | Solved | Planned | Labs |
 |----------|:------:|:-------:|------|
 | 💉 **SQL Injection** | **6** | 13 | [Browse →](./PortSwigger/SQL-Injection) |
-| 🔐 **Authentication** | **4** | 14 | [Browse →](./PortSwigger/Authentication) |
+| 🔐 **Authentication** | **5** | 14 | [Browse →](./PortSwigger/Authentication) |
 | 🧪 **Cross-Site Scripting (XSS)** | **5** | 30 | [Browse →](./PortSwigger/XSS-Cross-Site-Scripting) |
-| 🔑 **JWT Attacks** | **4** | 8 | [Browse →](./PortSwigger/JWT-Attacks) |
-| 📤 **File Upload** | 1 | 7 | [Browse →](./PortSwigger/File-Upload) |
+| 🔑 **JWT Attacks** | **5** | 8 | [Browse →](./PortSwigger/JWT-Attacks) |
+| 📤 **File Upload** | 2 | 7 | [Browse →](./PortSwigger/File-Upload) |
 | 📂 **File Path Traversal** | — | 7 | [Browse →](./PortSwigger/File-Path-Traversal) |
 | 💻 **OS Command Injection** | — | 5 | [Browse →](./PortSwigger/OS-Command-Injection) |
 | 🚪 **Access Control & IDOR** | — | 12 | [Browse →](./PortSwigger/Access-Control) |
