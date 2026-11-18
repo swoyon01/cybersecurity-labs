@@ -126,7 +126,7 @@ The layout is deliberately **three levels deep**: portfolio → category → lab
 
 - 🛡️ Aspiring **Application Security (AppSec) Engineer**
 - 🐍 **Stack:** Python · Linux · Networking · Web Security
-- 📚 **Currently:** PortSwigger Web Security Academy, working through SQLi → Authentication → XSS → JWT
+- 📚 **Currently:** PortSwigger Web Security Academy, working through SQLi → Authentication → XSS → JWT → IDOR 
 - 🌏 **Languages:** English · 中文 (HSK4) · বাংলা
 - 🎯 **Goal:** MSc in Cybersecurity → AppSec engineering role
 
