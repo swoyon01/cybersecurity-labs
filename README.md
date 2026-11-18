@@ -13,7 +13,7 @@
 
 | Platform | Completed | In progress | Focus |
 |----------|:---------:|:-----------:|-------|
-| **PortSwigger Web Security Academy** | 24 | 2 | Web app vulnerabilities |
+| **PortSwigger Web Security Academy** | 27 | 2 | Web app vulnerabilities |
 | **TryHackMe** | 5 | 1 | CTF, Linux, networking |
 | **Custom Tools & Code Review** | 2 | 1 | Python offsec tooling |
 
@@ -39,19 +39,19 @@ All labs are organised **by vulnerability type**, following the official Academy
 |----------|:------:|:-------:|------|
 | 💉 **SQL Injection** | **6** | 13 | [Browse →](./PortSwigger/SQL-Injection) |
 | 🔐 **Authentication** | **5** | 14 | [Browse →](./PortSwigger/Authentication) |
-| 🧪 **Cross-Site Scripting (XSS)** | **5** | 30 | [Browse →](./PortSwigger/XSS-Cross-Site-Scripting) |
+| 🧪 **Cross-Site Scripting (XSS)** | **7** | 30 | [Browse →](./PortSwigger/XSS-Cross-Site-Scripting) |
 | 🔑 **JWT Attacks** | **5** | 8 | [Browse →](./PortSwigger/JWT-Attacks) |
 | 📤 **File Upload** | 2 | 7 | [Browse →](./PortSwigger/File-Upload) |
 | 📂 **File Path Traversal** | — | 7 | [Browse →](./PortSwigger/File-Path-Traversal) |
 | 💻 **OS Command Injection** | — | 5 | [Browse →](./PortSwigger/OS-Command-Injection) |
-| 🚪 **Access Control & IDOR** | — | 12 | [Browse →](./PortSwigger/Access-Control) |
+| 🚪 **Access Control & IDOR** | **3** | 12 | [Browse →](./PortSwigger/Access-Control) |
 | 🌐 **SSRF** | — | 7 | [Browse →](./PortSwigger/SSRF) |
 | 📄 **XXE** | — | 7 | [Browse →](./PortSwigger/XXE) |
 | 🎭 **CSRF** | — | 9 | [Browse →](./PortSwigger/CSRF) |
 | 🔎 **Information Disclosure** | — | 5 | [Browse →](./PortSwigger/Information-Disclosure) |
 | 🧩 **Business Logic** | — | 8 | [Browse →](./PortSwigger/Business-Logic) |
 
-> **10 solved · 132 planned.** Each category page lists its labs, payload toolkit, defences, and roadmap — so this table never has to grow.
+> **27 solved · 132 planned.** Each category page lists its labs, payload toolkit, defences, and roadmap — so this table never has to grow.
 
 ### Recently solved
 
