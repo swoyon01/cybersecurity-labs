@@ -120,7 +120,7 @@ Any unauthenticated visitor who discovers the URL gets full administrative capab
 
 ## 📸 Screenshots
 
-All screenshots live in [`./screenshots`](./screenshots), in the order referenced above:
+All screenshots :
 
 1. `01-lab-start-shop-page.png` — the lab in its starting, unsolved state
 2. `02-robots-txt-disclosure.png` — `robots.txt` disclosing the `/administrator-panel` path
