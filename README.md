@@ -4,7 +4,7 @@
 
 [![TryHackMe](https://img.shields.io/badge/TryHackMe-Swoyon-212C42?style=flat&logo=tryhackme)](https://tryhackme.com/p/swoyon)
 [![PortSwigger](https://img.shields.io/badge/PortSwigger-Learner-FF6633?style=flat)](https://portswigger.net/web-security)
-[![Labs](https://img.shields.io/badge/Labs%20completed-16-brightgreen?style=flat)]()
+[![Labs](https://img.shields.io/badge/Labs%20completed-26-brightgreen?style=flat)]()
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat)](./LICENSE)
 
 ---
