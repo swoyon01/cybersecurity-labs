@@ -4,7 +4,7 @@
 
 [![TryHackMe](https://img.shields.io/badge/TryHackMe-Swoyon-212C42?style=flat&logo=tryhackme)](https://tryhackme.com/p/swoyon)
 [![PortSwigger](https://img.shields.io/badge/PortSwigger-Learner-FF6633?style=flat)](https://portswigger.net/web-security)
-[![Labs](https://img.shields.io/badge/Labs%20completed-26-brightgreen?style=flat)]()
+[![Labs](https://img.shields.io/badge/Labs%20completed-35-brightgreen?style=flat)]()
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat)](./LICENSE)
 
 ---
@@ -13,7 +13,7 @@
 
 | Platform | Completed | In progress | Focus |
 |----------|:---------:|:-----------:|-------|
-| **PortSwigger Web Security Academy** | 27 | 2 | Web app vulnerabilities |
+| **PortSwigger Web Security Academy** | 30 | 2 | Web app vulnerabilities |
 | **TryHackMe** | 5 | 1 | CTF, Linux, networking |
 | **Custom Tools & Code Review** | 2 | 1 | Python offsec tooling |
 
@@ -44,14 +44,14 @@ All labs are organised **by vulnerability type**, following the official Academy
 | 📤 **File Upload** | 2 | 7 | [Browse →](./PortSwigger/File-Upload) |
 | 📂 **File Path Traversal** | — | 7 | [Browse →](./PortSwigger/File-Path-Traversal) |
 | 💻 **OS Command Injection** | — | 5 | [Browse →](./PortSwigger/OS-Command-Injection) |
-| 🚪 **Access Control & IDOR** | **3** | 12 | [Browse →](./PortSwigger/Access-Control) |
+| 🚪 **Access Control & IDOR** | **6** | 12 | [Browse →](./PortSwigger/Access-Control) |
 | 🌐 **SSRF** | — | 7 | [Browse →](./PortSwigger/SSRF) |
 | 📄 **XXE** | — | 7 | [Browse →](./PortSwigger/XXE) |
 | 🎭 **CSRF** | — | 9 | [Browse →](./PortSwigger/CSRF) |
 | 🔎 **Information Disclosure** | — | 5 | [Browse →](./PortSwigger/Information-Disclosure) |
 | 🧩 **Business Logic** | — | 8 | [Browse →](./PortSwigger/Business-Logic) |
 
-> **27 solved · 132 planned.** Each category page lists its labs, payload toolkit, defences, and roadmap — so this table never has to grow.
+> **32 solved · 132 planned.** Each category page lists its labs, payload toolkit, defences, and roadmap — so this table never has to grow.
 
 ### Recently solved
 
