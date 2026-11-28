@@ -105,5 +105,5 @@ All screenshots :
 2. `02-id-carlos-redirect-not-solved.png` — browsing to `id=carlos` redirects back to wiener's account
 3. `03-burp-response-carlos-api-key-leak.png` — Burp Repeater showing carlos's API key leaked in the raw response before the redirect
 
-> 📝 **Author:** Hasan Abu Saber
+> 📝 **Author:** Saber Hasan Swoyon
 > 📅 **Date solved:** 2026-11-28
